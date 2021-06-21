@@ -28,7 +28,7 @@ class TodoView extends StatelessWidget {
         builder: (context, Box<Todo> box, _) {
           if (box.values.isEmpty) {
             return Center(
-              child: Text("No Eventer Available Yet! Do Something Bruh...",
+              child: Text("No Events Available Yet! Do Something Bruh...",
                   style: TextStyle(fontFamily: 'Montserrat')),
             );
           }
