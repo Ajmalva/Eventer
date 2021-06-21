@@ -31,22 +31,54 @@ class _AddTodoState extends State<AddTodo> {
           child: ListView(
             children: [
               TextFormField(
-                decoration: InputDecoration(hintText: 'Title'),
+                decoration: InputDecoration(hintText: 'Title',
+                border: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                  ),
+                  cursorColor: Colors.red[700],
                 onChanged: (value) {
                   setState(() {
                     title = value;
                   });
                 },
+                
               ),
               TextFormField(
-                decoration: InputDecoration(hintText: 'Description'),
+                decoration: InputDecoration(
+                  hintText: 'Description',
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                ),
+                cursorColor: Colors.red[700],
                 onChanged: (value) {
                   setState(() {
                     description = value;
                   });
                 },
               ),
-              ElevatedButton(onPressed: submitData, child: Text('Add Event'))
+              ElevatedButton(
+                onPressed: submitData,
+                child: Text('Add Event'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red[700],
+                ),
+              )
             ],
           )),
     );
